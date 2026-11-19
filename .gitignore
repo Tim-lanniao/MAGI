@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+node_modules/
+/.runtime/
+server/dist/
+web/dist/
+coverage/
+*.db
+*.db-*
+*.log
+.DS_Store
+/MAGI-backend.zip
+
+# 本机专用，不进入公开仓库
+.claude/
+*.local.md
+__pycache__/
+deploy/windows/
+deploy/shared_gateway.py
+deploy/test_shared_gateway.py
+deploy/Caddyfile.shared
+deploy/configure_deepseek.py
+deploy/test_configure_deepseek.py

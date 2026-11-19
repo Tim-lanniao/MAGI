@@ -1,0 +1,3 @@
+ALTER TABLE questions ADD COLUMN needs_web INTEGER NOT NULL DEFAULT 0 CHECK (needs_web IN (0,1));
+ALTER TABLE votes ADD COLUMN sources TEXT NOT NULL DEFAULT '[]';
+ALTER TABLE results ADD COLUMN source_overlap TEXT;

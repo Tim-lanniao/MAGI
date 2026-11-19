@@ -1,0 +1,33 @@
+{
+	auto_https disable_redirects
+	servers {
+		protocols h1 h2
+		strict_sni_host on
+	}
+}
+
+magi.lanthan.cn {
+	tls {
+		issuer acme {
+			dir https://acme-v02.api.letsencrypt.org/directory
+			disable_http_challenge
+		}
+	}
+	log {
+		output file "{$MAGI_LOG_DIR}/access.log" {
+			mode 0600
+			roll_size 10MiB
+			roll_keep 5
+		}
+		format filter {
+			wrap json
+			fields {
+				request>uri query {
+					delete token
+				}
+				request>headers>Referer delete
+			}
+		}
+	}
+	reverse_proxy 127.0.0.1:3000
+}

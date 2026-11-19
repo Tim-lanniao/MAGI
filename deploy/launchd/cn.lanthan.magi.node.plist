@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>cn.lanthan.magi.node</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>NODE</string>
+    <string>server/dist/src/index.js</string>
+  </array>
+  <key>UserName</key><string>MAGI_USER</string>
+  <key>WorkingDirectory</key><string>PROJECT_DIRECTORY</string>
+  <key>EnvironmentVariables</key><dict><key>HOME</key><string>USER_HOME</string></dict>
+  <key>Umask</key><integer>63</integer>
+  <key>RunAtLoad</key><true/>
+  <key>KeepAlive</key><true/>
+  <key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>STDOUT_PATH</string>
+  <key>StandardErrorPath</key><string>STDERR_PATH</string>
+</dict>
+</plist>

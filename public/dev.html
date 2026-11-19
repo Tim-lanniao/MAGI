@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MAGI 后端测试</title>
+<h1>MAGI 后端测试</h1>
+<form id="register">
+  <label>设备名称 <input name="device" required maxlength="120" autocomplete="off"></label>
+  <button>使用此邀请注册 Passkey</button>
+</form>
+<p><button id="login" type="button">用 Passkey 登录</button></p>
+<form id="question">
+  <p><label>是／否问题 <input name="question" required></label></p>
+  <p><label>背景 <textarea name="background"></textarea></label></p>
+  <p><label>目标与约束 <textarea name="goals"></textarea></label></p>
+  <p><label>可逆性 <select name="reversibility"><option>可逆</option><option>不可逆</option></select></label></p>
+  <p><label>我的票 <select name="vote"><option>是</option><option>否</option></select></label></p>
+  <p><label>置信度 <input name="confidence" type="number" min="50" max="100" value="70" required></label></p>
+  <p><label>核心理由 <input name="reason" required maxlength="50"></label></p>
+  <p>提交后将锁定你的票，并把问题、背景、目标与可逆性发送给 OpenAI 和 DeepSeek。</p>
+  <button>锁定并提交一次</button>
+</form>
+<pre id="status" role="status" aria-live="polite"></pre>
+<script src="/webauthn.js" defer></script>
+<script src="/dev.js" defer></script>
+</html>

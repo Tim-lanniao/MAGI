@@ -1,0 +1,15 @@
+{
+  "Version": "1",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "alidns:DescribeDomainRecords",
+        "alidns:UpdateDomainRecord"
+      ],
+      "Resource": [
+        "acs:alidns:*:YOUR_ACCOUNT_UID:domain/lanthan.cn"
+      ]
+    }
+  ]
+}
